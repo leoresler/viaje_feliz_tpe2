@@ -1,5 +1,6 @@
 <?php
 
+include_once "Persona.php";
 include_once "Viaje.php";
 include_once "PasajeroEstandar.php";
 include_once "PasajeroVip.php";
@@ -55,20 +56,19 @@ while ($opcion != 4) {
             
             $objResponsable = new ResponsableV($numEmpleado, $numLicencia, $nombreResponsable, $apellidoResponsable);
 
-            $viaje = new Viaje($codigo, $destino, $cantMaxPasajeros, $coleccionDePasajeros ,$objResponsable, $costoViaje, 0);
-
             echo "Ahora agregue pasajeros al viaje. \n";
             echo "Cuantos pasajeros quiere agregar: \n";
-            $cantPasajeros = trim(fgets(STDIN));
-
-            while ($cantMaxPasajeros < $cantPasajeros || (!is_numeric($cantPasajeros))) {
-                echo "Supero el limite de pasajeros, porfavor ingrese de nuevo la cantidad: \n";
-                $cantPasajeros = trim(fgets(STDIN));
+            $numP = trim(fgets(STDIN));
+            while (!is_numeric($numP) || $numP > $cantMaxPasajeros){
+                echo "\nIncorrecto, volver a ingresar el numero de pasajeros: ";
+                $numP = trim(fgets(STDIN));
             }
 
-            echo "\nQue tipo de pasajero desea agregar:";
+            
+            $viaje = new Viaje($codigo, $destino, $cantMaxPasajeros, $coleccionDePasajeros ,$objResponsable, $costoViaje, 0);
 
-            for ($i=0; $i < $cantPasajeros; $i++){
+
+            for ($i=0; $i < $numP; $i++){
                 echo "\n Pasajero numero: ". $i + 1;
                 
                 echo "
