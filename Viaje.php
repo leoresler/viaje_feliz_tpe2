@@ -212,12 +212,7 @@ class Viaje {
         return $infoPasajero;
     }
 
-    public function __toString()
-    {
-        return "\nCodigo de viaje: " . $this->getCodigoDeViaje() .
-        "\nDestino: " . $this->getDestino() .
-        "\nCantidad maxima de pasajeros: " . $this->getCantMaxPasajeros() .
-        "\nResponsable del viaje: " . $this->getObjResponsable() .
-        "\nLista de pasajeros: " . $this->mostrarColPasajero();
+    public function __toString(){
+        return "Codigo de viaje: " . $this->getCodigoDeViaje() . " \n El destino: " . $this->getDestino() . "\n Cantidad Maxima de pasajeros: " . $this->getCantMaxPasajeros() . "\nCosto del viaje: " . $this->getCostoViaje() . "\nCostos abonados de los pasajeros: " . $this->getCostosAbonadosPasajeros() . "\n" . $this->getObjResponsable() . "\n" . $this->mostrarColPasajero();
     }
 }

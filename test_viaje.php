@@ -85,7 +85,7 @@ while ($opcion != 4) {
                 if ($tipo == 1) {
                     echo "\n-Pasajero Estandar-\n";
                     echo "\nNombre:";
-                    $nombeEstandar = trim(fgets(STDIN));
+                    $nombreEstandar = trim(fgets(STDIN));
                     echo "\nApellido:";
                     $apellidoEstandar = trim(fgets(STDIN));
                     echo "\nNumero de telefono:";
@@ -100,7 +100,7 @@ while ($opcion != 4) {
                     $viaje->agregarPasajeroEstandar($nombreEstandar, $apellidoEstandar, $telefonoEstandar, $numDocEstandar, $nroAsientoEstandar, $nroTicketEstandar);
                 } elseif ($tipo == 2) {
                     echo "\n -Pasajero VIP-";
-                    echo "\nNombre";
+                    echo "\nNombre:";
                     $nombreVip = trim(fgets(STDIN));
                     echo "\nApellido: ";
                     $apellidoVip = trim(fgets(STDIN));
