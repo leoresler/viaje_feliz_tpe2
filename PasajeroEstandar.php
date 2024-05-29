@@ -37,7 +37,8 @@ class PasajeroEstandar extends Persona {
     }
 
     public function darPorcentajeIncremento(){
-        return 10;
+        $incremento = 0.1;
+        return $incremento;
     }
 
 
