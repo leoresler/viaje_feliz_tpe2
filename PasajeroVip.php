@@ -39,10 +39,10 @@ class PasajeroVip extends Persona {
     }
 
     public function darPorcentajeIncremento() {
-        $incremento = 35;
+        $incremento = 0.35;
 
         if ($this->getCantMillas() > 300) {
-            $incremento = 30;
+            $incremento = 0.3;
         }
 
         return $incremento;

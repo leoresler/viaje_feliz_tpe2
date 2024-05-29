@@ -61,9 +61,9 @@ class PasajeroDiferente extends Persona {
         }
 
         if ($suma == 1){
-            $incremento = 15;
+            $incremento = 0.15;
         } elseif ($suma > 1){
-            $incremento = 30;
+            $incremento = 0.3;
         }
         return $incremento;
     }
