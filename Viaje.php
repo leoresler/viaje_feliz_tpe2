@@ -187,6 +187,25 @@ class Viaje {
     }
 
 
+    public function venderPasaje($objPasajero){
+        $colPasajeros = $this->getPasajeros();
+        $costoViaje = $this->getCostoViaje();
+        $costos = $this->getCostosAbonadosPasajeros();
+        $porcentaje = $objPasajero->darPorcentajeIncremento();
+        
+        if ($this->hayPasajesDisponible()){
+            array_push($colPasajeros, $objPasajero);
+            $this->setPasajeros($colPasajeros);
+            $costoFinal = ($costoViaje * $porcentaje) / 100;
+            $costoFinal = $costoFinal + $costoViaje;
+            $costos = $costos + $costoFinal;
+            $this->setCostosAbonadosPasajeros($costos);
+        }else {
+            $costoFinal = 0;
+        }
+        return $costoFinal;
+    }
+
     // Metodo para modificar a la persona a cargo del viaje
     public function modificarResponsable($numEmpleado, $numLicencia, $nombre, $apellido) {
         if ($this->getObjResponsable() != null && $this->getObjResponsable()->getNumEmpleado() == $numEmpleado) {

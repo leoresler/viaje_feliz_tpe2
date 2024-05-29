@@ -305,8 +305,8 @@ while ($opcion != 4) {
                             }
                         break;
 
-                        $arregloPasajeros = $viaje->getPasajeros();
-
+                        case 7:
+                            $arregloPasajeros = $viaje->getPasajeros();
                             
                             if (!$viaje->hayPasajesDisponible()){
                                 echo "\n No se puede agregar pasajeros, porque esta lleno.\n";
