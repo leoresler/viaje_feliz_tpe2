@@ -232,6 +232,6 @@ class Viaje {
     }
 
     public function __toString(){
-        return "Codigo de viaje: " . $this->getCodigoDeViaje() . " \n El destino: " . $this->getDestino() . "\n Cantidad Maxima de pasajeros: " . $this->getCantMaxPasajeros() . "\nCosto del viaje: " . $this->getCostoViaje() . "\nCostos abonados de los pasajeros: " . $this->getCostosAbonadosPasajeros() . "\n" . $this->getObjResponsable() . "\n" . $this->mostrarColPasajero();
+        return "Codigo de viaje: " . $this->getCodigoDeViaje() . "\n El destino: " . $this->getDestino() . "\nCantidad Maxima de pasajeros: " . $this->getCantMaxPasajeros() . "\nCosto del viaje: " . $this->getCostoViaje() . "\nCostos abonados de los pasajeros: " . $this->getCostosAbonadosPasajeros() . "\n\nResponsable: " . $this->getObjResponsable() . "\n" . $this->mostrarColPasajero();
     }
 }

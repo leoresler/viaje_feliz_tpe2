@@ -49,4 +49,8 @@ class Persona{
     public function __toString(){
         return "Nombre: " . $this->getNombre() . "\n Apellido: " . $this->getApellido() . "\n Telefono: " . $this->getTelefono() . "\n Numero de documento: " . $this->getNumDocumento();
     }
+
+    public function darPorcentajeIncremento() {
+        return 0;
+    }
 }

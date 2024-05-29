@@ -60,7 +60,7 @@ while ($opcion != 4) {
             echo "Cuantos pasajeros quiere agregar: \n";
             $numP = trim(fgets(STDIN));
             while (!is_numeric($numP) || $numP > $cantMaxPasajeros){
-                echo "\nIncorrecto, volver a ingresar el numero de pasajeros: ";
+                echo "\nVerificar que no haya superado el limite, volver a ingresar el numero de pasajeros: ";
                 $numP = trim(fgets(STDIN));
             }
 
